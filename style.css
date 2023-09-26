@@ -355,11 +355,27 @@ ul{
     margin:0
   }
 }
-@media(mix-width: 769px) and (max-width:1024px){
-  
-}
-@media(min-width: 1025px){
-  
+body {
+  font-family: Arial, sans-serif;
 }
 
+/* Mobile styles */
+.container {
+  max-width: 100%;
+  padding: 10px;
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) {
+  .container {
+      max-width: 768px;
+  }
+}
+
+/* Media query for desktops */
+@media (min-width: 1024px) {
+  .container {
+      max-width: 1024px;
+  }
+}
 
