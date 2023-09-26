@@ -1,0 +1,358 @@
+/* Reset default margin and padding for list items */
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Style the navbar */
+.navbar {
+  background-color: #333;
+}
+
+/* Style the navigation list */
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Style the list items */
+.nav-list li {
+  position: relative; /* Allows for dropdown positioning */
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Style the dropdown container */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 120px;
+  z-index: 1;
+}
+
+/* Style the dropdown items */
+.dropdown-content li {
+  border-bottom: 1px solid #444;
+}
+
+/* Show the dropdown when hovering over the Services item */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  padding: 10px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+/* Reset default margin and padding for the slider */
+.slider-container {
+  width: 100%;
+  height: 300px;
+  background-color: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create a horizontal slider */
+.slider {
+  display: flex;
+  width: 300%; /* 100% * number of images */
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s; /* Smooth transition effect */
+}
+
+/* Style individual images */
+.slider img {
+  width: 33.33%; /* 100% / number of images */
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Hide non-active slides */
+.slider img:not(:first-child) {
+  display: none;
+}
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 1325px;
+  margin: 0 auto;
+}
+
+/* Style the text content on the left */
+.content {
+  flex: 1;
+}
+
+/* Style the button on the right */
+.button {
+  text-align: center;
+  float: right;
+}
+
+button {
+  background-color:red;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn1{
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn{
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+.header{
+
+  font-size:xx-large;
+  text-align: center;
+  color: red;
+  font-family: 'Times New Roman', Times, serif;
+}
+.sub{
+  font-style: italic;
+  text-align: center;
+  font-size: small;
+}
+.head{
+
+  font-size:xx-large;
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+.sub-head{
+  font-style: italic;
+  text-align: center;
+  font-size: small;
+  color: white;
+}
+.cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 1325px;
+  margin: 0 auto;
+}
+
+/* Style the multi-color background */
+.background {
+  background: linear-gradient(to , #FF5733, #FFBD33, #FF5733);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style the container for the images */
+.image-container {
+  position: relative;
+  width: 300px; /* Adjust the total width as needed */
+  height: 400; /* Set the height of the container */
+  margin: 0 auto;
+
+}
+
+/* Style individual images */
+.image {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  top: 50%; /* Adjust the top position to control the vertical overlap */
+}
+
+/* Position the images to overlap horizontally */
+.image:nth-child(1) {
+  left: -75px;
+  z-index: 1; /* Controls the layering/ordering of the images */
+  transform: translateX(-50%); 
+  width: 300px; /* Set the width of the frame container */
+  height: 300px; /* Set the height of the frame container */
+  border: 5px solid #333; /* Border styles create the frame effect */
+  border-radius: 10px; /* Add rounded corners to the frame */
+  overflow: hidden; /* Hide any overflow from the image */
+  /* Adjust the value to control horizontal overlap */
+}
+
+.image:nth-child(2) {
+  left: 150px; /* Adjust the left position to control the horizontal overlap */
+  z-index: 2;
+  width: 300px; /* Set the width of the frame container */
+  height: 300px; /* Set the height of the frame container */
+  border: 5px solid #333; /* Border styles create the frame effect */
+  border-radius: 10px; /* Add rounded corners to the frame */
+  overflow: hidden; /* Hide any overflow from the image */
+  
+}
+
+.image.above {
+  z-index: 3; 
+   width: 500px; /* Set the width of the frame container */
+    height: 300px; /* Set the height of the frame container */
+    border: 5px solid #333; /* Border styles create the frame effect */
+    border-radius: 10px; /* Add rounded corners to the frame */
+    overflow: hidden; /* Hide any overflow from the image */
+    /* Center image appears above the other two */
+}
+/* Define the dot-before style */
+.dot-before::before {
+  content: "\2022"; /* Unicode character for a bullet point (dot) */
+  color: #ff5722; /* Adjust the color of the dot */
+  margin-right: 5px; /* Adjust the spacing between the dot and the text */
+}
+.client{
+  text-align:center;
+}
+.box{
+  text-align: center;
+  justify-content: center;
+}
+body{
+  line-height: 1.5;
+  font-family: 'Poppins' , sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.con{
+  max-width: 1170px;
+  margin: auto;
+}
+.row{
+  display:flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #24262b;
+  padding:20px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color:#ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin: bottom 10px ;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight:300 ;
+  color:#bbbbbb;
+  display:block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 25%;
+    margin:0
+  }
+}
+
