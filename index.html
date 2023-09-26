@@ -1,26 +1,199 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name='viewport'
-          content='width=device-width, initial-scale=1.0'>
-</head>
-<body>
-    <div style="text-align: center;
-                background-color: rgb(16, 81, 202);">
-        <h1 style="color: white;">
-            Responsive Page Using Only HTML
-        </h1>
-        <h2 style="color: white;">
-            To make test responsive
-        </h2>
-        <p style="font-size: 5vw;color: white;">
-            This is for Geeks for Geeks
-        </p>
-        <picture>
-            <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20190809013546/gfg_350X350.png"
-                 alt="geeksforgeeks">
-        </picture>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MODUS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="head">MODUS</div>
+      <div class="sub-head">versus</div>
+        <ul class="nav-list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li class="dropdown">
+                <a href="#">PORTFOLIO</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">portfolio1</a></li>
+                    <li><a href="#">portfolio2</a></li>
+                    <li><a href="#">portfolio3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">FEATURES</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="slider-container">
+      <div class="slider">
+          <img src="image/img1.jpg" alt="Image 1">
+          <img src="image/img2.png" alt="Image 2">
+          <img src="image/img3.png" alt="Image 3">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+           <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+      </div>
+  </div>
+  <script src="script.js">
+    document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    const sliderButton = document.querySelector(".slider-button");
+    let isDragging = false;
+    let startPosition, currentTranslate;
+
+    sliderButton.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startPosition = e.clientX;
+        currentTranslate = slider.getBoundingClientRect().left;
+    });
+
+    document.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        const deltaX = e.clientX - startPosition;
+        slider.style.transform = `translateX(${currentTranslate + deltaX}px)`;
+    });
+
+    document.addEventListener("mouseup", () => {
+        isDragging = false;
+    });
+});
+
+  </script>
+  <br>
+         <div class="container">
+          <div class="content">
+             <h3>Some Of Our Top Services</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, quam eget </p>
+          </div>
+          <div class="button">
+              <button>View More</button>
+          </div>
+      </div>
+      <div class="container">
+      <div class="box">
+        <img src="image/r1.png" alt="Image 1">
+        <h3>SUSPENDISSE</h3>
+        <br>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </P>
+      <div class="btn1">
+        <button>Read more</button>
     </div>
-</body>
+    </div>
+    <div class="box">
+        <img src="image/r2.png" alt="Image 2">
+        <h3>MAECENAS</h3>
+        <br>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </P>
+        <div class="btn"> 
+            <button>Read more</button>
+        </div>
+    </div>
+    <div class="box">
+        <img src="image/r3.png" alt="Image 3">
+        <h3>ALIQUAM</h3>
+        <br>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </P>
+        <div class="btn">
+            <button>Read more</button>
+    </div>
+    </div>
+    <div class="box">
+        <img src="image/r4.png" alt="Image 4">
+        <h3>HABITASSE</h3>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+         <button>Read more</button>
+         </div>
+    </div>
+    </div>
+    <br>
+    <div class="header">WHY MODUS VERSUS?</div>
+    <div class="sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+    <div class="container">
+        <div class="box">
+          <img src="image/y2.png" alt="Image 1">
+          <h5>Why choose Us?</h5>
+          <br>
+            <P class="dot-before">Quisque at massa ipsum</P>
+            <p class="dot-before">consectetur adipiscing elit</p>
+            <p class="dot-before">Nullam vestibulum</p>
+            <p class="dot-before">Sed non velit massa</p>
+      </div>
+      <div class="box">
+        <img src="image/y1.png" alt="Image 1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+             Nullam vestibulum, quam eget condimentum ultricies </p>
+        <img src="image/s1.png">
+        <br>
+        
+    </div>
+    <div class="box">
+        <img src="image/y3.png" alt="Image 1">
+        <h5>What clients say</h5>
+        <br>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+            Nullam vestibulum, quam eget condimentum ultricies </P><br>
+            <b>Jhon Doe</b>
+    </div>
+    
+    </div>
+    <br>
+    <div class="client">
+        <p><b>Our happy clients</b></p>
+        <img src="image/s2.png" style="width: 100%;">
+    </div>
+   <footer class="footer">
+    <div class="con">
+        <div class="row">
+            <div class="footer-col">
+                <h4>MODUS versus</h4>
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li><br>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li><br>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li><br>
+
+                    <li><a href="#">Phone: 182 2569 5896 </a></li>
+                    <li><a href="#">e-mail: info@modu.versus</a></li>
+                </ul>
+            </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li ><a href="#">About</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+                    <div class="footer-col">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>For the Blog</h4>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+   </footer>
+    </body>   
 </html>
